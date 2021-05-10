@@ -1,0 +1,118 @@
+body{
+    margin: 0;
+    font-family: extrude;
+}
+@font-face{
+    font-family: 'extrude';
+    src: url(Extrude-90aK.ttf);
+    font-style: normal;
+    font-weight: 100;
+}
+html { 
+    background: url(caveback.gif) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    image-rendering: pixelated; 
+    image-rendering: -moz-crisp-edges; 
+    image-rendering: crisp-edges;
+}
+header{
+
+    margin: 0;
+}
+header h1{
+    font-weight: normal;
+    clear: both;
+    margin: auto;
+    color: #a44c34;
+    text-align: center;
+    font-size: 40px;
+}
+#normal{
+    color: #999 !important;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 90px;
+    margin-top: -70px;
+
+}
+nav ul li{
+    margin-right: 130px;
+    font-size: 26px;
+    color: #999;
+}
+nav ul li a:visited{
+    text-decoration: none;
+    color: #ecbc5c;
+}
+nav ul li a:active{
+    text-decoration: none;
+    color: #ecbc5c;
+}
+nav ul li a:hover{
+    text-decoration: none;
+    color: #ecbc5c;
+}
+.col{
+    float: left;
+}
+footer{
+
+    clear: both;
+}
+#bottom-bar {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    
+}
+.social{
+
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: -43px;
+}
+.social a{
+    margin: 30px;
+}
+#mutebtn{
+    background:url(Buttons/play.png) no-repeat;
+    filter: invert(1);
+    border: none;
+    width: 46px;
+    height: 32px;
+    margin-left: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    outline: none;
+}
+#playpausebtn{
+    background:url(Buttons/on.png) no-repeat;
+    filter: invert(1);
+    border: none;
+    width: 46px;
+    height: 32px;
+    margin-left: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    outline: none;
+}
+

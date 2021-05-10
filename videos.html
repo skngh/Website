@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+    <title>Videos - Sam Knight</title>
+    <link rel="stylesheet" href="Styles/videos.css">
+    <link rel="icon" href="Images/a-master-favicon.ico">
+</head>
+<body>
+    <div>
+        <button id="mutebtn"></button>
+    </div>
+    <div>
+        <button id="playpausebtn"></button>
+    </div>
+    <header id="top-bar">
+        <nav>  
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="music.html">music</a></li>
+                <li id="normal">videos</li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+            &nbsp;&nbsp; 
+                <h1>Sam Knight</h1>
+        </nav>
+    </header>
+    <div>
+        <ul class="videos">
+            <li>
+                <iframe width="320" height="180" src="https://www.youtube.com/embed/75s43jugJtU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </li>
+            <li>
+                <iframe width="320" height="180" src="https://www.youtube.com/embed/8KL0Ndy_Ooc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </li>
+            <li>
+                <iframe width="320" height="180" src="https://www.youtube.com/embed/CjDtvp4lyFw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </li>
+            <li>
+                <iframe width="320" height="180" src="https://www.youtube.com/embed/7RZnCQELZx8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </li>
+            <li>
+                <iframe width="320" height="180" src="https://www.youtube.com/embed/BwlG3V4iiO8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </li>
+        </ul>
+    </div>
+    <footer id="bottom-bar">
+        <ul class="social links">
+            <li>
+                <a href="https://www.instagram.com/imsamknight/" target="_blank">
+                    <img src="Icons/Instagram.png" alt="Instagram">
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/iamsamknight" target="_blank">
+                    <img src="Icons/twitter.png" alt="Twitter">
+                </a>
+            </li>
+            <li>
+                <a href="https://music.apple.com/us/artist/sam-knight/1434909049" target="_blank">
+                    <img src="Icons/apple music.png" alt="Apple Music">
+                </a>
+
+            </li>
+            <li>
+                <a href="https://soundcloud.com/imsamknight" target="_blank">
+                    <img src="Icons/soundcloud.png" alt="Soundcloud">
+                </a>
+
+            </li>
+            <li>
+                <a href="https://open.spotify.com/artist/7AqjpKHz17X0PxVY6uFwD8" target="_blank">
+                    <img src="Icons/spotify.png" alt="Spotify">
+                </a>
+
+            </li>
+            <li>
+                <a href="https://www.youtube.com/channel/UCcmbqBupwNI0wGhguivftpQ/videos" target="_blank">
+                    <img src="Icons/youtube.png" alt="YouTube">
+                </a>
+
+            </li>
+            <li>
+                <a href="https://imsamknight.bandcamp.com/" target="_blank">
+                    <img src="Icons/bandcamp.png" alt="Bandcamp">
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <script>
+        var audio, seek_bar, playbtn, mutebtn;
+        function initAudioPlayer(){
+            audio = new Audio();
+            audio.src = "audio/slimecave.mp3";
+            type="audio/mp3";
+            audio.loop = true;
+            mutebtn = document.getElementById("mutebtn");
+            playbtn = document.getElementById("playpausebtn");
+
+            playbtn.addEventListener("click", playPause)
+            mutebtn.addEventListener("click", mute);
+            function playPause(){
+                if(audio.paused){
+                    audio.play();
+                    playbtn.style.background="url(Styles/Buttons/pause.png) no-repeat";
+                }
+                else{
+                    audio.pause();
+                    playbtn.style.background="url(Styles/Buttons/on.png) no-repeat";
+                }
+            }
+            function mute(){
+                if(audio.muted){
+                    audio.muted = false;
+                    mutebtn.style.background = "url(Styles/Buttons/play.png) no-repeat";
+                } else{
+                    audio.muted = true;
+                    mutebtn.style.background = "url(Styles/Buttons/mute.png) no-repeat";
+                }
+            }
+        }
+        window.addEventListener("load", initAudioPlayer);
+    
+     </script>
+</body>
+</html>

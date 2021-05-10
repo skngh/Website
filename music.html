@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+<head>
+    <title>Music - Sam Knight</title>
+    <link rel="stylesheet" href="Styles/music.css">
+    <link rel="icon" href="Images/a-master-favicon.ico">
+</head>
+<body>
+    <div>
+        <button id="mutebtn"></button>
+    </div>
+    <div>
+        <button id="playpausebtn"></button>
+    </div>
+    <header>
+        <nav>  
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li id="normal">music</li>
+                <li><a href="videos.html">videos</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+            &nbsp;&nbsp; 
+                <h1>Sam Knight</h1>
+        </nav>
+    </header>
+    <div class="sheet">
+        <a href="Files/digging my own grave - Sam Knight.pdf" target="_blank" download="digging my own grave - Sam Knight" class="digging">Download digging my own grave Sheet Music PDF</a>
+    </div>
+    <div>
+        <ul class="albums">
+            <li class="picture"><a href="https://ampl.ink/BLzw2" target="_blank">
+                <img src="Images/orange.png" class="orangephoto" height="147px" width="147px" alt="Orange">
+                <figcaption class="orangetext">
+                    <p><u>Orange</p>(Album 2018)</u>
+                </figcaption>
+                </a>
+            </li>
+            <li class="picture"><a href="https://ampl.ink/WjOLv" target="_blank">
+                <img src="Images/oiltom.png" class="tomphoto" height="147px" width="147px" alt="oil_tom">
+                <figcaption class="tomtext">
+                    <p><u>oil_tom</p>(EP 2019)</u>
+                </figcaption>
+                </a>
+            </li>
+            <li class="picture"><a href="https://ampl.ink/pxGAQ" target="_blank">
+                <img src="Images/vista.png" class="vistaphoto" height="147px" width="147px" alt="Vista Connect">
+                <figcaption class="vistatext">
+                    <p><u>Vista Connect</u></p>
+                    <u>(Single 2020)</u>
+                </figcaption>
+                </a>
+            </li>
+            <li class="picture"><a href="https://ampl.ink/1j9QJ" target="_blank">
+                
+                <img src="Images/hearse.png" class="hearsephoto" height="147px" width="147px" alt="Hearse">
+                <figcaption class="hearsetext">
+                    <p><u>HEARSE</u></p>
+                    <u>(Single 2020)</u>
+                </figcaption>
+          
+            </a>
+        </li>
+            <div class="break"></div>
+            <li class="picture"><a href="https://ampl.ink/Q0MEZ" target="_blank">
+                <img src="Images/never stopped prelude.png" class="preludephoto" height="147px" width="147px" alt="Never Stopped: Prelude">
+                <figcaption class="preludetext">
+                    <u><p>Never Stopped: Prelude</p>(EP 2021)</u>
+                </figcaption>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    <footer id="bottom-bar">
+        <ul class="social links">
+            <li>
+                <a href="https://www.instagram.com/imsamknight/" target="_blank">
+                    <img src="Icons/Instagram.png" alt="Instagram">
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/iamsamknight" target="_blank">
+                    <img src="Icons/twitter.png" alt="Twitter">
+                </a>
+            </li>
+            <li>
+                <a href="https://music.apple.com/us/artist/sam-knight/1434909049" target="_blank">
+                    <img src="Icons/apple music.png" alt="Apple Music">
+                </a>
+
+            </li>
+            <li>
+                <a href="https://soundcloud.com/imsamknight" target="_blank">
+                    <img src="Icons/soundcloud.png" alt="Soundcloud">
+                </a>
+
+            </li>
+            <li>
+                <a href="https://open.spotify.com/artist/7AqjpKHz17X0PxVY6uFwD8" target="_blank">
+                    <img src="Icons/spotify.png" alt="Spotify">
+                </a>
+
+            </li>
+            <li>
+                <a href="https://www.youtube.com/channel/UCcmbqBupwNI0wGhguivftpQ/videos" target="_blank">
+                    <img src="Icons/youtube.png" alt="YouTube">
+                </a>
+
+            </li>
+            <li>
+                <a href="https://imsamknight.bandcamp.com/" target="_blank">
+                    <img src="Icons/bandcamp.png" alt="Bandcamp">
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <script>
+        var audio, seek_bar, playbtn, mutebtn;
+        function initAudioPlayer(){
+            audio = new Audio();
+            audio.src = "audio/waterfall.mp3";
+            type="audio/mp3";
+            audio.loop = true;
+            mutebtn = document.getElementById("mutebtn");
+            playbtn = document.getElementById("playpausebtn");
+
+            playbtn.addEventListener("click", playPause)
+            mutebtn.addEventListener("click", mute);
+            function playPause(){
+                if(audio.paused){
+                    audio.play();
+                    playbtn.style.background="url(Styles/Buttons/pause.png) no-repeat";
+                }
+                else{
+                    audio.pause();
+                    playbtn.style.background="url(Styles/Buttons/on.png) no-repeat";
+                }
+            }
+            function mute(){
+                if(audio.muted){
+                    audio.muted = false;
+                    mutebtn.style.background = "url(Styles/Buttons/play.png) no-repeat";
+                } else{
+                    audio.muted = true;
+                    mutebtn.style.background = "url(Styles/Buttons/mute.png) no-repeat";
+                }
+            }
+        }
+        window.addEventListener("load", initAudioPlayer);
+    
+     </script>
+</body>
+</html>

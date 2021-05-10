@@ -1,0 +1,122 @@
+body{
+    margin: 0;
+    font-family: extrude;
+}
+@font-face{
+    font-family: 'extrude';
+    src: url(Extrude-90aK.ttf);
+    font-style: normal;
+    font-weight: 100;
+}
+html { 
+    background: url(background.gif) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    image-rendering: pixelated; 
+    image-rendering: -moz-crisp-edges; 
+    image-rendering: crisp-edges;
+  }
+header{
+
+    margin: 0;
+}
+#normal{
+    color: black !important;
+}
+header h1{
+    font-weight: normal;
+    clear: both;
+    margin: auto;
+
+    text-align: center;
+    font-size: 40px;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 90px;
+    margin-top: -70px;
+}
+nav ul li{
+    margin-right: 130px;
+    font-size: 26px;
+}
+nav ul li a:visited{
+    text-decoration: none;
+    color: blue;
+}
+nav ul li a:active{
+    text-decoration: none;
+    color: blue;
+}
+nav ul li a:hover{
+    text-decoration: none;
+    color: blue;
+}
+.col{
+    float: left;
+}
+footer{
+    clear: both;
+}
+.center{
+ 
+    display: block;
+    margin: auto;
+    max-width: 30%;
+    max-width: 400px;
+    
+    
+}
+#bottom-bar {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    
+}
+.social{
+
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: -43px;
+}
+.social a{
+    margin: 30px;
+}
+#mutebtn{
+    background:url(Buttons/play.png) no-repeat;
+    border: none;
+    width: 46px;
+    height: 32px;
+    margin-left: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    outline: none;
+}
+#playpausebtn{
+    background:url(Buttons/on.png) no-repeat;
+    border: none;
+    width: 46px;
+    height: 32px;
+    margin-left: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    outline: none;
+}
+
