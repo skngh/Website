@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 body{
     margin: 0;
     font-family: extrude;
@@ -140,20 +141,26 @@ figcaption{
 .break {
     flex-basis: 100%;
     height: 40px;
-  }
-  .hearsetext{
+}
+.hearsetext{
       display: none;
       margin-left: 28px;
-  }
-  .hearsephoto:hover + .hearsetext{
+}
+.hearsephoto:hover + .hearsetext{
       display: block;
-  }
-  .vistatext{
+}
+.hearsephoto {
+    cursor: pointer;
+}
+.vistatext{
     display: none;
     margin-left: 23px;
 }
 .vistaphoto:hover + .vistatext{
     display: block;
+}
+.vistaphoto {
+    cursor: pointer;
 }
 .tomtext{
     display: none;
@@ -162,12 +169,19 @@ figcaption{
 .tomphoto:hover + .tomtext{
     display:block;
 }
+.tomphoto {
+    cursor: pointer;
+}
 .orangetext{
     display: none;
     margin-left: 29px;
 }
+
 .orangephoto:hover + .orangetext{
     display: block;
+}
+.orangephoto {
+    cursor: pointer;
 }
 .preludetext{
     display:none;
@@ -175,6 +189,19 @@ figcaption{
 }
 .preludephoto:hover + .preludetext{
     display: block;
+}
+.preludephoto {
+    cursor: pointer;
+}
+.nightintext{
+    display:none;
+    margin-left: 29px;
+}
+.nightinphoto:hover + .nightintext{
+    display: block;
+}
+.nightinphoto {
+    cursor: pointer;
 }
 #mutebtn{
     background:url(Buttons/play.png) no-repeat;
@@ -203,4 +230,78 @@ figcaption{
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
     outline: none;
+}
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(5, 4, 4, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    opacity: 0;
+    transition: .4s;
+    pointer-events: none;
+    font-family: 'Poppins', sans-serif
+}
+.modal {
+    background: #edeef6;
+    width: 600px;
+    max-width: 100%;
+    padding: 30px 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    grid-template-areas: "left right";
+}
+.modal-photo {
+    grid-area: left;
+}
+.modal-right {
+    display: grid;
+    text-align: center;
+    grid-area: right;
+    grid-row-gap: 10px;
+}
+.link-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+.more {
+    margin-top: 19px;
+    font-family: 'extrude', 'Poppins', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black !important;
+}
+
+.listen {
+    font-family: 'extrude', 'Poppins', sans-serif;
+    font-size: 20px;
+}
+.show {
+    opacity: 1;
+    transition: .7s;
+    pointer-events: all;
+}
+.close {
+    background-image: url(Buttons/X.png);
+    background-size: 20px 20px;
+    height: 20px;  
+    width: 20px;
+    border: none;
+    opacity: .4;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
 }
