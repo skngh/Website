@@ -25,6 +25,7 @@
         </nav>
     </header>
     <div class="modal-container" id="orange-container">
+        <div class ="orange-close screen-close"></div>
         <div class="orange-modal modal">
             <img src="Images/fullQuality/orange.png" height="230px" width="230px" alt="Orange" title="Orange" class="modal-photo">
             <div class="modal-right">
@@ -40,6 +41,7 @@
         </div>
     </div>
     <div class="modal-container" id="oiltom-container">
+        <div class ="oil-close screen-close"></div>
         <div class="oiltom-modal modal">
             <img src="Images/fullQuality/oiltom.jpeg" height="230px" width="230px" alt="oil_tom" title="oil_tom" class="modal-photo">
             <div class="modal-right">
@@ -55,6 +57,7 @@
         </div>
     </div>
     <div class="modal-container" id="vista-container">
+        <div class ="vista-close screen-close"></div>
         <div class="vista-modal modal">
             <img src="Images/fullQuality/vistaconnect.jpg" height="230px" width="230px" alt="Vista Connect" title="Vista Connect" class="modal-photo">
             <div class="modal-right">
@@ -70,6 +73,7 @@
         </div>
     </div>
     <div class="modal-container" id="hearse-container">
+        <div class ="hearse-close screen-close"></div>
         <div class="hearse-modal modal">
             <img src="Images/fullQuality/hearse.jpeg" height="230px" width="230px" alt="Hearse" title="Hearse" class="modal-photo">
             <div class="modal-right">
@@ -85,6 +89,7 @@
         </div>
     </div>
     <div class="modal-container" id="never-container">
+        <div class ="never-close screen-close"></div>
         <div class="never-modal modal">
             <img src="Images/fullQuality/neverstopped.jpg" height="230px" width="230px" alt="Never Stopped: Prelude" title="Never Stopped: Prelude" class="modal-photo">
             <div class="modal-right">
@@ -100,6 +105,7 @@
         </div>
     </div>
     <div class="modal-container" id="night-container">
+        <div class ="night-close screen-close"></div>
         <div class="night-modal modal">
             <img src="Images/fullQuality/nightin.jpg" height="230px" width="230px" alt="Night In" title="Night In" class="modal-photo">
             <div class="modal-right">
@@ -241,74 +247,144 @@
         const openOrange = document.querySelector(".orangephoto");
         const orangeModal = document.querySelector(".orange-modal");
         const orangeContainer = document.querySelector("#orange-container");
-        const orangeClose = document.querySelector(".orange-close");
+        const orangeClose = document.querySelectorAll(".orange-close");
 
         openOrange.addEventListener("click", () => {
             orangeContainer.classList.add('show');
+            playRandomNote();
         })
-        orangeClose.addEventListener("click", () => {
+        orangeClose.forEach(e => {
+            e.addEventListener("click", () => {
             orangeContainer.classList.remove("show");
-        })
+            })
+        });
 
         const openTom = document.querySelector(".tomphoto");
         const tomModal = document.querySelector(".oiltom-modal");
         const tomContainer = document.querySelector("#oiltom-container");
-        const oilClose = document.querySelector(".oil-close")
+        const oilClose = document.querySelectorAll(".oil-close")
 
         openTom.addEventListener("click", () => {
             tomContainer.classList.add('show');
+            playRandomNote();
         })
-        oilClose.addEventListener("click", () => {
+        oilClose.forEach(e => {
+            e.addEventListener("click", () => {
             tomContainer.classList.remove("show");
-        })
+            })
+        });
 
         const openVista = document.querySelector(".vistaphoto");
         const vistaModal = document.querySelector(".vista-modal");
         const vistaContainer = document.querySelector("#vista-container");
-        const vistaClose = document.querySelector(".vista-close")
+        const vistaClose = document.querySelectorAll(".vista-close")
 
         openVista.addEventListener("click", () => {
             vistaContainer.classList.add('show');
+            playRandomNote();
         })
-        vistaClose.addEventListener("click", () => {
+        vistaClose.forEach(e => {
+            e.addEventListener("click", () => {
             vistaContainer.classList.remove("show");
-        })
+            })
+        });
 
         const openHearse = document.querySelector(".hearsephoto");
         const hearseModal = document.querySelector(".hearse-modal");
         const hearseContainer = document.querySelector("#hearse-container");
-        const hearseClose = document.querySelector(".hearse-close")
+        const hearseClose = document.querySelectorAll(".hearse-close")
 
         openHearse.addEventListener("click", () => {
             hearseContainer.classList.add('show');
+            playRandomNote();
         })
-        hearseClose.addEventListener("click", () => {
+        hearseClose.forEach(e => {
+            e.addEventListener("click", () => {
             hearseContainer.classList.remove("show");
-        })
+            })
+        });
 
         const openNever = document.querySelector(".preludephoto");
         const neverModal = document.querySelector(".never-modal");
         const neverContainer = document.querySelector("#never-container");
-        const neverClose = document.querySelector(".never-close")
+        const neverClose = document.querySelectorAll(".never-close")
 
         openNever.addEventListener("click", () => {
             neverContainer.classList.add('show');
+            playRandomNote();
         })
-        neverClose.addEventListener("click", () => {
+        neverClose.forEach(e => {
+            e.addEventListener("click", () => {
             neverContainer.classList.remove("show");
-        })
+            })
+        });
 
         const openNight = document.querySelector(".nightinphoto");
         const neverNight = document.querySelector(".night-modal");
         const nightContainer = document.querySelector("#night-container");
-        const nightClose = document.querySelector(".night-close")
+        const nightClose = document.querySelectorAll(".night-close")
 
         openNight.addEventListener("click", () => {
             nightContainer.classList.add('show');
+            playRandomNote();
         })
-        nightClose.addEventListener("click", () => {
+        nightClose.forEach(e => {
+            e.addEventListener("click", () => {
             nightContainer.classList.remove("show");
-        })
+            })
+        });
+
+        let soundOne = new Audio("audio/Sound effects/Web G.mp3");
+        let soundTwo = new Audio("audio/Sound effects/Web A.mp3");
+        let soundThree = new Audio("audio/Sound effects/Web B.mp3");
+        let soundFour = new Audio("audio/Sound effects/Web D.mp3");
+        let soundFive = new Audio("audio/Sound effects/Web E.mp3");
+
+        function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+    const playRandomNote = () => {
+        let randomNum = getRandomInt(1, 5);
+        switch (randomNum) {
+            case 1:
+                soundOne.pause();
+                soundOne.currentTime = 0;
+                soundOne.play();
+                console.log(randomNum);
+                break;
+            case 2:
+                soundTwo.pause();
+                soundTwo.currentTime = 0;
+                soundTwo.play();
+                console.log(randomNum);
+                break;
+            case 3:
+                soundThree.pause();
+                soundThree.currentTime = 0;
+                soundThree.play();
+                console.log(randomNum);
+                break;
+            case 4:
+                soundFour.pause();
+                soundFour.currentTime = 0;
+                soundFour.play();
+                console.log(randomNum);
+                break;
+            case 5:
+                soundFive.pause();
+                soundFive.currentTime = 0;
+                soundFive.play();
+                console.log(randomNum);
+                break;
+            default:
+                console.log(randomNum);
+                break;
+        }
+        return;
+    }
      </script>
 </body>
 </html>
