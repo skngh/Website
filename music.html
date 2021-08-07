@@ -341,9 +341,13 @@
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-
+    let prevNum = 0;
     const playRandomNote = () => {
         let randomNum = getRandomInt(1, 5);
+        if (randomNum == prevNum) {
+            if (randomNum == 5) randomNum -= 1;
+            else randomNum += 1;
+        }
         switch (randomNum) {
             case 1:
                 soundOne.pause();
@@ -371,6 +375,7 @@
                 soundFive.play();
                 break;
         }
+        prevNum = randomNum;
         return;
     }
      </script>
