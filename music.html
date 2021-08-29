@@ -112,9 +112,9 @@
                 <div>"Night In" is a compilation of instrumental songs I made from 2019-2021. I've always prefered making instrumental songs, but I never put them out, so I decided to compile a few of my favorites for this.</div>
                 <div class="listen">Listen here:</div>
                     <div class="link-container">
-                        <a href="https://open.spotify.com/album/3GIrUMC08GQxQ6wvZ0jqW7" target="_blank"><img src="Icons/spotify.png" height="50px" width="50px" alt="Spotify" title="Spotify"></a>
-                        <a href="https://music.apple.com/gb/album/never-stopped-prelude-ep/1563043598?uo=4&app=music" target="_blank"><img src="Icons/apple music.png" height="50px" width="50px" alt="Apple Music" title="Apple Music"></a>
-                        <a href="https://ampl.ink/Q0MEZ" target="_blank"><div class="more">More...</div></a>
+                        <a href="https://open.spotify.com/album/1MRaLnHHFUUKveycpMceg2" target="_blank"><img src="Icons/spotify.png" height="50px" width="50px" alt="Spotify" title="Spotify"></a>
+                        <a href="https://music.apple.com/us/album/night-in/1579934482?uo=4&app=music" target="_blank"><img src="Icons/apple music.png" height="50px" width="50px" alt="Apple Music" title="Apple Music"></a>
+                        <a href="https://ampl.ink/jE3eb" target="_blank"><div class="more">More...</div></a>
                     </div>
             </div>
             <button class="close night-close"></button>
@@ -337,13 +337,14 @@
         let soundFive = new Audio("audio/Sound effects/Web E.mp3");
 
         function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+            min = Math.ceil(min);
+            max = Math.floor(max);
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
     let prevNum = 0;
     const playRandomNote = () => {
         let randomNum = getRandomInt(1, 5);
+        //Make note not repeat
         if (randomNum == prevNum) {
             if (randomNum == 5) randomNum -= 1;
             else randomNum += 1;
